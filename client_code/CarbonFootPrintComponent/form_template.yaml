@@ -1,0 +1,621 @@
+container:
+  type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: tiny, spacing_above: small, col_widths: '{}', spacing_below: small,
+    background: ''}
+components:
+- type: Label
+  properties: {role: headline, align: center, tooltip: '', border: '', foreground: 'theme:White',
+    visible: true, text: CARBON CALCULATOR, font_size: 35, font: Roboto Slab, spacing_above: none,
+    icon_align: left, spacing_below: none, italic: false, background: 'theme:Primary
+      700', bold: true, underline: true, icon: ''}
+  name: label_title
+  layout_properties: {grid_position: 'FRKSTX,OGSYNB'}
+- type: Label
+  properties: {role: subheading, align: center, tooltip: '', border: '', foreground: 'theme:White',
+    visible: true, text: Carbon Footprint Calculator For Individuals And Households,
+    font_size: 12, font: Roboto Light, spacing_above: none, icon_align: left, spacing_below: none,
+    italic: true, background: 'theme:Primary 700', bold: false, underline: false,
+    icon: ''}
+  name: label_subtitle
+  layout_properties:
+    col_widths: {}
+    grid_position: GNNVHN,YACRHJ
+- type: ColumnPanel
+  properties: {role: card, col_widths: '{"BCDCDM":20}'}
+  name: card_name
+  layout_properties: {grid_position: 'FBTXSV,SWQKAQ'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Enter your name, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'MJOTML,BCDCDM'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Enter your name,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_name
+    layout_properties: {grid_position: 'MJOTML,HIGDLZ'}
+    event_bindings: {pressed_enter: text_name_pressed_enter}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: false,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '', spacing_below: small,
+    background: ''}
+  name: card_info
+  layout_properties: {grid_position: 'QOLBJW,CWXEZJ'}
+  components:
+  - type: Label
+    properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Calculating your carbon footprint can help you to identify
+        ways that you can lessen your impact on the environment. Calculating your
+        carbon footprint requires taking lots of different factors into account. You
+        may not be able to get an exact figure to represent your carbon footprint,
+        but you can get a close estimate', font_size: 15, font: Roboto Mono, spacing_above: small,
+      icon_align: left, spacing_below: small, italic: true, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_info
+    layout_properties:
+      col_widths: {}
+      grid_position: DPFVAV,EFQTJF
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: false,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card_1
+  layout_properties: {grid_position: 'VMRKTL,ZONYTH'}
+  components:
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '→ Number of
+        members in your household:', font_size: 18, font: '', spacing_above: small,
+      type: text, spacing_below: small, italic: true, background: '', bold: false,
+      underline: false}
+    name: quiz_1
+    layout_properties: {grid_position: 'LBPLJB,PDWMFX'}
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '14', visible: true, text: 0 (Living Alone),
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q1, underline: false}
+    name: rb1
+    layout_properties:
+      col_widths: {}
+      grid_position: NMZRYJ,TPSQFO
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '12', visible: true, text: Share with 1 other person,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q1, underline: false}
+    name: rb2
+    layout_properties:
+      col_widths: {}
+      grid_position: OFZEBY,IOYMSC
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '8', visible: true, text: Share with 3 other people,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q1, underline: false}
+    name: rb3
+    layout_properties:
+      col_widths: {}
+      grid_position: LBTOUZ,DUZKWJ
+    event_bindings: {}
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '2', visible: true, text: more than 5,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q1, underline: false}
+    name: rb4
+    layout_properties:
+      col_widths: {}
+      grid_position: WITIWT,PIMHWH
+  - type: Button
+    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Submit, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: submit
+    layout_properties: {grid_position: 'SRDSMH,SZBQVI', full_width_row: true}
+    event_bindings: {click: submit_click}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: false,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card_2
+  layout_properties:
+    col_widths: {}
+    grid_position: RBMNWW,QEJYSU
+    full_width_row: true
+  components:
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: → Size of your home,
+      font_size: 18, font: '', spacing_above: small, type: text, spacing_below: small,
+      italic: true, background: '', bold: false, underline: false}
+    name: quiz_1_copy
+    layout_properties: {grid_position: 'LBPLJB,PDWMFX'}
+    event_bindings: {}
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '10', visible: true, text: Large, font_size: 15,
+      font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+      bold: false, group_name: q2, underline: false}
+    name: rb5
+    layout_properties:
+      col_widths: {}
+      grid_position: NMZRYJ,TPSQFO
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '7', visible: true, text: Medium, font_size: 15,
+      font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+      bold: false, group_name: q2, underline: false}
+    name: rb6
+    layout_properties:
+      col_widths: {}
+      grid_position: OFZEBY,IOYMSC
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '4', visible: true, text: Small, font_size: 15,
+      font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+      bold: false, group_name: q2, underline: false}
+    name: rb7
+    layout_properties:
+      col_widths: {}
+      grid_position: LBTOUZ,DUZKWJ
+    event_bindings: {}
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '2', visible: true, text: Apartment, font_size: 15,
+      font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+      bold: false, group_name: q2, underline: false}
+    name: rb8
+    layout_properties:
+      col_widths: {}
+      grid_position: WITIWT,PIMHWH
+  - type: Button
+    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Submit, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: submit2
+    layout_properties:
+      col_widths: {}
+      grid_position: ZUGUCN,CNERHK
+      full_width_row: true
+    event_bindings: {click: submit2_click}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: false,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card_3
+  layout_properties:
+    col_widths: {}
+    grid_position: URTCPJ,FLFMSU
+    full_width_row: true
+  components:
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: → Your food choices,
+      font_size: 18, font: '', spacing_above: small, type: text, spacing_below: small,
+      italic: true, background: '', bold: false, underline: false}
+    name: quiz_3
+    layout_properties: {grid_position: 'LBPLJB,PDWMFX'}
+    event_bindings: {}
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '10', visible: true, text: Domestic Meat (daily),
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q3, underline: false}
+    name: rb12
+    layout_properties:
+      col_widths: {}
+      grid_position: NMZRYJ,KQANXK
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '8', visible: true, text: Domestic Meat (few times per week),
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q3, underline: false}
+    name: rb9
+    layout_properties:
+      col_widths: {}
+      grid_position: PYXUGG,LPYTRD
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '4', visible: true, text: Mostly vegetables,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q3, underline: false}
+    name: rb10
+    layout_properties:
+      col_widths: {}
+      grid_position: OFZEBY,IOYMSC
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '12', visible: true, text: Prepackaged food,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q3, underline: false}
+    name: rb11
+    layout_properties:
+      col_widths: {}
+      grid_position: LBTOUZ,DUZKWJ
+    event_bindings: {}
+  - type: Button
+    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Submit, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: submit3
+    layout_properties:
+      col_widths: {}
+      grid_position: ZUGUCN,CNERHK
+      full_width_row: true
+    event_bindings: {click: submit3_click}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: false,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card_4
+  layout_properties:
+    col_widths: {}
+    grid_position: BRJFQW,AJQUNR
+    full_width_row: true
+  components:
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '→ how many
+        household purchases you make each year (Includes: furniture, electronics or
+        other household gadgets per year):', font_size: 12, font: '', spacing_above: small,
+      type: text, spacing_below: small, italic: true, background: '', bold: true,
+      underline: false}
+    name: quiz_3_copy
+    layout_properties: {grid_position: 'LBPLJB,PDWMFX'}
+    event_bindings: {}
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '10', visible: true, text: 'More than
+        7 ', font_size: 15, font: '', spacing_above: small, spacing_below: small,
+      italic: false, background: '', bold: false, group_name: q4, underline: false}
+    name: rb13
+    layout_properties:
+      col_widths: {}
+      grid_position: NMZRYJ,KQANXK
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '8', visible: true, text: 5 to 7 items,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q4, underline: false}
+    name: rb14
+    layout_properties:
+      col_widths: {}
+      grid_position: PYXUGG,LPYTRD
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '6', visible: true, text: 3 to 5 items,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q4, underline: false}
+    name: rb15
+    layout_properties:
+      col_widths: {}
+      grid_position: OFZEBY,IOYMSC
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '4', visible: true, text: less than 3 items,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q4, underline: false}
+    name: rb16
+    layout_properties:
+      col_widths: {}
+      grid_position: LBTOUZ,DUZKWJ
+    event_bindings: {}
+  - type: Button
+    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Submit, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: submit4
+    layout_properties:
+      col_widths: {}
+      grid_position: ZUGUCN,CNERHK
+      full_width_row: true
+    event_bindings: {click: submit4_click}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: false,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card_5
+  layout_properties:
+    col_widths: {}
+    grid_position: TZMZVK,KCPDAI
+    full_width_row: true
+  components:
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '→ How much
+        waste do you produce per week:', font_size: 18, font: '', spacing_above: small,
+      type: text, spacing_below: small, italic: true, background: '', bold: false,
+      underline: false}
+    name: quiz_3_copy_2
+    layout_properties: {grid_position: 'LBPLJB,PDWMFX'}
+    event_bindings: {}
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '40', visible: true, text: 4 garbage can per week,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q5, underline: false}
+    name: rb17
+    layout_properties:
+      col_widths: {}
+      grid_position: NMZRYJ,KQANXK
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '30', visible: true, text: 3 garbage can per week,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q5, underline: false}
+    name: rb18
+    layout_properties:
+      col_widths: {}
+      grid_position: PYXUGG,LPYTRD
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '20', visible: true, text: 2 garbage can per week,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q5, underline: false}
+    name: rb19
+    layout_properties:
+      col_widths: {}
+      grid_position: OFZEBY,IOYMSC
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '10', visible: true, text: 1 garbage can per week,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q5, underline: false}
+    name: rb20
+    layout_properties:
+      col_widths: {}
+      grid_position: LBTOUZ,DUZKWJ
+    event_bindings: {}
+  - type: Button
+    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Submit, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: submit5
+    layout_properties:
+      col_widths: {}
+      grid_position: ZUGUCN,CNERHK
+      full_width_row: true
+    event_bindings: {click: submit5_click}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: false,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card_transport
+  layout_properties: {grid_position: 'CDBCSG,ANSSWB', full_width_row: true}
+  components:
+  - type: Label
+    properties: {role: subheading, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Your annual transportation scores:', font_size: 18, font: roboto slab,
+      spacing_above: small, icon_align: left, spacing_below: none, italic: false,
+      background: '', bold: false, underline: true, icon: ''}
+    name: label_2
+    layout_properties: {grid_position: 'MGWZDS,WAKHNB'}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: false,
+    wrap_on: mobile, col_spacing: tiny, spacing_above: none, col_widths: '{}', spacing_below: none,
+    background: ''}
+  name: card_6
+  layout_properties:
+    col_widths: {}
+    grid_position: QTHGHK,QTZAZA
+    full_width_row: true
+  components:
+  - type: TextBox
+    properties: {role: null, align: center, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '• Personal
+        Vehicle ', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+      italic: true, background: '', bold: false, underline: false}
+    name: quiz_3_copy_3
+    layout_properties: {grid_position: 'LBPLJB,PDWMFX'}
+    event_bindings: {}
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '12', visible: true, text: more than 15000 miles per year,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q6, underline: false}
+    name: rb21
+    layout_properties:
+      col_widths: {}
+      grid_position: NMZRYJ,KQANXK
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '10', visible: true, text: 10000 to 15000 miles per year,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q6, underline: false}
+    name: rb22
+    layout_properties:
+      col_widths: {}
+      grid_position: PYXUGG,LPYTRD
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '6', visible: true, text: '1,000 to 10,000
+        miles per year', font_size: 15, font: '', spacing_above: small, spacing_below: small,
+      italic: false, background: '', bold: false, group_name: q6, underline: false}
+    name: rb23
+    layout_properties:
+      col_widths: {}
+      grid_position: OFZEBY,IOYMSC
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '4', visible: true, text: 'less than 1,000
+        miles per year', font_size: 15, font: '', spacing_above: small, spacing_below: small,
+      italic: false, background: '', bold: false, group_name: q6, underline: false}
+    name: rb24
+    layout_properties:
+      col_widths: {}
+      grid_position: LBTOUZ,DUZKWJ
+    event_bindings: {}
+  - type: Button
+    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Submit, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: submit6
+    layout_properties:
+      col_widths: {}
+      grid_position: QELHTL,PYDSFA
+      full_width_row: true
+    event_bindings: {click: submit6_click}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: false,
+    wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}', spacing_below: small,
+    background: ''}
+  name: card_7
+  layout_properties:
+    col_widths: {}
+    grid_position: RMPPIV,UFKCYG
+    full_width_row: true
+  components:
+  - type: TextBox
+    properties: {role: null, align: center, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '• Public Vehicle ',
+      font_size: null, font: '', spacing_above: none, type: text, spacing_below: small,
+      italic: true, background: '', bold: false, underline: false}
+    name: quiz_3_copy_4
+    layout_properties: {grid_position: 'LBPLJB,PCVFSF'}
+    event_bindings: {}
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '12', visible: true, text: more than 20000 miles per year,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q7, underline: false}
+    name: rb25
+    layout_properties:
+      col_widths: {}
+      grid_position: NMZRYJ,KQANXK
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '6', visible: true, text: 15000 to 20000 miles per year,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q7, underline: false}
+    name: rb26
+    layout_properties:
+      col_widths: {}
+      grid_position: PYXUGG,LPYTRD
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '4', visible: true, text: 1000 to 10000 miles per year,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q7, underline: false}
+    name: rb27
+    layout_properties:
+      col_widths: {}
+      grid_position: OFZEBY,IOYMSC
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '2', visible: true, text: 'less than 1,000
+        miles per year', font_size: 15, font: '', spacing_above: small, spacing_below: small,
+      italic: false, background: '', bold: false, group_name: q7, underline: false}
+    name: rb28
+    layout_properties:
+      col_widths: {}
+      grid_position: LBTOUZ,DUZKWJ
+    event_bindings: {}
+  - type: Button
+    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Submit, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: submit7
+    layout_properties:
+      col_widths: {}
+      grid_position: IRIBBL,XKFCQS
+      full_width_row: true
+    event_bindings: {click: submit7_click}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: false,
+    wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}', spacing_below: small,
+    background: ''}
+  name: card_8
+  layout_properties:
+    col_widths: {}
+    grid_position: QQUPQO,TVMZZK
+    full_width_row: true
+  components:
+  - type: TextBox
+    properties: {role: null, align: center, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: • Flights, font_size: null,
+      font: '', spacing_above: none, type: text, spacing_below: small, italic: true,
+      background: '', bold: false, underline: false}
+    name: quiz_3_copy_5
+    layout_properties: {grid_position: 'LBPLJB,PDWMFX'}
+    event_bindings: {}
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '2', visible: true, text: Short distance flights in 1 year (within country),
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q8, underline: false}
+    name: rb29
+    layout_properties:
+      col_widths: {}
+      grid_position: NMZRYJ,KQANXK
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '6', visible: true, text: To nearby countries,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q8, underline: false}
+    name: rb30
+    layout_properties:
+      col_widths: {}
+      grid_position: RPKXBV,CYVSXX
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '30', visible: true, text: 2 garbage can per week,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q8, underline: false}
+    name: rb31
+    layout_properties:
+      col_widths: {}
+      grid_position: OFZEBY,IOYMSC
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '20', visible: true, text: To other continents,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q8, underline: false}
+    name: rb32
+    layout_properties:
+      col_widths: {}
+      grid_position: LBTOUZ,DUZKWJ
+    event_bindings: {}
+  - type: RadioButton
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '0', visible: true, text: No flights,
+      font_size: 15, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: false, group_name: q8, underline: false}
+    name: rb32_copy
+    layout_properties:
+      col_widths: {}
+      grid_position: TTUHSD,PZUUCZ
+  - type: Button
+    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Submit, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: submit8
+    layout_properties:
+      col_widths: {}
+      grid_position: DMIEXS,SVWKCU
+      full_width_row: true
+    event_bindings: {click: submit8_click}
+- type: Label
+  properties: {role: subheading, align: center, tooltip: '', border: '', foreground: '',
+    visible: false, text: '', font_size: null, font: '20', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: true, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_output
+  layout_properties:
+    col_widths: {}
+    grid_position: VLHMYT,XMNLBJ
+is_package: true

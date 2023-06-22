@@ -1,0 +1,62 @@
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+- source: /runtime/services/anvil/users.yml
+  client_config: {allow_signup: true, enable_automatically: true, use_email: true,
+    confirm_email: false, use_google: true, allow_remember_me: true, remember_me_days: 365}
+  server_config: {user_table: users}
+- source: /runtime/services/google.yml
+  client_config: {}
+  server_config: {}
+startup: {type: form, module: HomeForm}
+package_name: Paklimate
+allow_embedding: false
+name: Paklimate Final
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
+metadata: {title: Paklimate}
+startup_form: SolutionsComponent
+native_deps: {head_html: '<link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Mono:wght@200&display=swap"
+    rel="stylesheet">'}
+db_schema:
+  users:
+    title: Users
+    client: none
+    server: full
+    columns:
+    - name: email
+      admin_ui: {width: 200}
+      type: string
+    - name: enabled
+      admin_ui: {width: 100}
+      type: bool
+    - name: is_admin
+      admin_ui: {width: 200}
+      type: bool
+    - name: signed_up
+      admin_ui: {width: 200}
+      type: datetime
+    - name: password_hash
+      admin_ui: {width: 200}
+      type: string
+    - name: confirmed_email
+      admin_ui: {width: 200}
+      type: bool
+    - name: email_confirmation_key
+      admin_ui: {width: 200}
+      type: string
+    - name: last_login
+      admin_ui: {width: 200}
+      type: datetime
+    - name: remembered_logins
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: n_password_failures
+      admin_ui: {width: 200}
+      type: number
+renamed: true

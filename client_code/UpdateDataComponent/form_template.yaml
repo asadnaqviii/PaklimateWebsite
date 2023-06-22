@@ -1,0 +1,156 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+  event_bindings: {refreshing_data_bindings: HomeForm}
+components:
+- type: Label
+  properties: {role: headline, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: Update Data, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_1
+  layout_properties: {grid_position: 'MYREEG,BZHPJQ'}
+- type: ColumnPanel
+  properties: {role: card, col_widths: '{}'}
+  name: card_1
+  layout_properties: {grid_position: 'GPENIB,TPOCET'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Enter City''s Position in Linkedlist to Update Data:',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: label_2
+    layout_properties: {grid_position: 'PDVIXI,OPEMBQ'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Enter Existing City Name,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_city
+    layout_properties: {grid_position: 'PDVIXI,WFLBMW'}
+    event_bindings: {}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card2
+  layout_properties:
+    col_widths: {}
+    grid_position: BCXQTT,XZZBVN
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Enter Updated Temperature: ', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_2_copy
+    layout_properties: {grid_position: 'PDVIXI,OPEMBQ'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_temp
+    layout_properties: {grid_position: 'PDVIXI,WFLBMW'}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card3
+  layout_properties:
+    col_widths: {}
+    grid_position: FGFDHL,LJSWHJ
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Enter Updated Air Pollution Levels: ', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_2_copy_2
+    layout_properties: {grid_position: 'PDVIXI,OPEMBQ'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_airpol
+    layout_properties: {grid_position: 'PDVIXI,WFLBMW'}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card4
+  layout_properties:
+    col_widths: {}
+    grid_position: JTUNLW,BDIFFX
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Enter Updated Land Pollution Levels:', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_2_copy_3
+    layout_properties: {grid_position: 'PDVIXI,OPEMBQ'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_landpol
+    layout_properties: {grid_position: 'PDVIXI,WFLBMW'}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card5
+  layout_properties:
+    col_widths: {}
+    grid_position: YLMNSC,XBKDNV
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Enter Updated Water Pollution Levels:', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_2_copy_4
+    layout_properties: {grid_position: 'PDVIXI,OPEMBQ'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_waterpol
+    layout_properties: {grid_position: 'PDVIXI,WFLBMW'}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card6
+  layout_properties:
+    col_widths: {}
+    grid_position: JPGZZX,TMFUHN
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Enter Updated Noise Pollution Levels:', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_2_copy_5
+    layout_properties: {grid_position: 'PDVIXI,OPEMBQ'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_noisepol
+    layout_properties: {grid_position: 'PDVIXI,WFLBMW'}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: Submit data, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: submit
+  layout_properties: {grid_position: 'HLDCCG,HFWLEY'}
+  event_bindings: {click: submit_click}
+is_package: true

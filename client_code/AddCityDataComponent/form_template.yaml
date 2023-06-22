@@ -1,0 +1,184 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: Label
+  properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: Add a New City, font_size: 32, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: headline_1
+  layout_properties:
+    col_widths: {}
+    grid_position: KDOQRH,TDZUIJ
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: You can easily add more nodes in the linked list by using the options below,
+    font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: label_calcThreat
+  layout_properties:
+    col_widths: {}
+    grid_position: XBZYBE,WTEEFT
+- type: ColumnPanel
+  properties: {role: card, col_widths: '{}'}
+  name: cardCity
+  layout_properties:
+    col_widths: {}
+    grid_position: MMGXFZ,WYKHSJ
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Enter name of the new city:', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_1_copy
+    layout_properties: {grid_position: 'ZMEHHW,QQUHEP'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: New City Name,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: textBox_city
+    layout_properties: {grid_position: 'ZMEHHW,YVYJVO'}
+    event_bindings: {}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card_temp
+  layout_properties:
+    col_widths: {}
+    grid_position: GHJJTO,SPMOZA
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Enter Average Temperature in Celcius:', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_1_copy_5
+    layout_properties: {grid_position: 'ZMEHHW,QQUHEP'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Temperature in Celcius,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: textBox_Temp
+    layout_properties: {grid_position: 'ZMEHHW,YVYJVO'}
+    event_bindings: {}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card_air
+  layout_properties:
+    col_widths: {}
+    grid_position: DUATOP,YGAJCR
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Enter Air Pollution Level (Ranging from 1-10):', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_air
+    layout_properties: {grid_position: 'ZMEHHW,QQUHEP'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Air Pollution Level,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: textBox_Airpol
+    layout_properties: {grid_position: 'ZMEHHW,YVYJVO'}
+    event_bindings: {}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card_land
+  layout_properties:
+    col_widths: {}
+    grid_position: STLSLM,SGZHPV
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Enter Land Pollution Level (Ranging from 1-10):', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_1_copy_3
+    layout_properties: {grid_position: 'ZMEHHW,QQUHEP'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Land Pollution Level,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: textBox_Landpol
+    layout_properties: {grid_position: 'ZMEHHW,YVYJVO'}
+    event_bindings: {}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card_water
+  layout_properties:
+    col_widths: {}
+    grid_position: RDYLYT,SUUKXL
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Enter Water Pollution Level (Ranging from 1-10):', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_1_copy_4
+    layout_properties: {grid_position: 'ZMEHHW,QQUHEP'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Water Pollution Level,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: textBox_Waterpol
+    layout_properties: {grid_position: 'ZMEHHW,AGSEND'}
+    event_bindings: {}
+- type: ColumnPanel
+  properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: card_noise
+  layout_properties:
+    col_widths: {}
+    grid_position: OPXBAC,FMQUAQ
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Enter Noise Pollution Level (Ranging from 1-10):', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_1_copy_6
+    layout_properties: {grid_position: 'ZMEHHW,QQUHEP'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Noise Pollution Level,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: textBox_NoisePol
+    layout_properties: {grid_position: 'ZMEHHW,YVYJVO'}
+    event_bindings: {}
+- type: Label
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: '#ff0000',
+    visible: false, text: Error Message, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_error
+  layout_properties:
+    col_widths: {}
+    grid_position: ZMVORQ,VAYNWW
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: 'theme:White', visible: true, text: Add data, font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#f10e0e',
+    bold: false, underline: false, icon: ''}
+  name: button_AddData
+  layout_properties:
+    col_widths: {}
+    grid_position: VDIASU,AZUNAV
+  event_bindings: {click: button_AddData_click}
+is_package: true
